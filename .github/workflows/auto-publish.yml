@@ -1,15 +1,16 @@
-name: Build, Validate, Deploy and Publish
+name: whatever-whatever
+
 on:
-  pull_request: {}
   push:
-    branches: [main]
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
-  main:
-    name: Build and validate spec, then deploy and publish (only if push to main branch)
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-      - uses: w3c/spec-prod@v2
-        with:
-          GH_PAGES_BRANCH: main
-          W3C_ECHIDNA_TOKEN: ${{ secrets.ECHIDNA_TOKEN }}
+ build:
+   runs-on: ubuntu-latest
+   steps:
+   - name: checkout repo
+     uses: actions/checkout@main
+   - name: build application
+     run: make build
