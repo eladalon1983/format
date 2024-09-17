@@ -11,14 +11,14 @@
     <section id="abstract">
       <h2>Abstract</h2>
       <p>
-               Test 34
-        Pre-existing mechanisms such as {{MediaDevices/getDisplayMedia()}} allow Web applications to
+               Test 35
+                 Pre-existing mechanisms such as {{MediaDevices/getDisplayMedia()}} allow Web applications to
         initiate screen-capture. If the user chooses to share a tab, the capturing application has a
         video {{MediaStreamTrack}}. Mechanisms such as [[mediacapture-region|Region Capture]] allow
         this track to be mutated - performing some operation on the captured frames. (In the case of
         [[mediacapture-region|Region Capture]], this mutation consists of cropping.)
-      </p>
-      <p>
+    </p>
+  <p>
         This document introduces a new mutation mechanism which we name "restriction". After a Web
         application "restricts" a video track to a given target-element, frames produced on that
         video track only consist information from the target-element and (and its descendants).
