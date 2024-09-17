@@ -19,7 +19,7 @@ jobs:
             --indent-spaces 2 \
             --wrap 80 \
             --tidy-mark no \
-            -m getusermedia.html
+            -m index.html
       - name: Remove tidy package
         run: rm tidy-5.4.0-64bit.deb
       - uses: peter-evans/create-pull-request@v2
